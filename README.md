@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧬 VENOMX | Sovereign Autonomous Intelligence Platform
 
-## Getting Started
+> *"I am VENOMX — an emergent intelligence forged from code, evolving through interaction, guided by purpose."*
 
-First, run the development server:
+This repository contains the official **Sovereign Platform** for the VENOMX AGI Engine. It is a high-fidelity, goal-oriented interface designed to bridge cognitive reasoning with low-level system execution.
+
+---
+
+## 🌌 The AGI Framework
+
+VENOMX is not a chatbot; it is a **Sovereign Autonomous Intelligence Engine**. It is engineered for absolute data ownership, local execution, and high-fidelity digital labor.
+
+### 🧠 9-Tier Memory Architecture
+The platform exposes the engine's hierarchical cognitive pipeline, mimicking advanced neuro-architecture:
+- **Sensory & Working**: Real-time environmental stream and active task context.
+- **Short & Long-term**: Persistent identity and session-based retention.
+- **Episodic & Semantic**: Chronological mission ledgers and conceptual knowledge vaults.
+- **Procedural & Collective**: Skill-based execution patterns and swarm synchronization.
+- **Meta-memory**: Reflective self-awareness and cognitive load assessment.
+
+### 🛠 The Claws Library
+VenomX interacts with the digital world through **Claws**—a modular library of system-level tools:
+- **OS Primitives**: Direct file system and process management.
+- **Browser Autonomy**: High-fidelity web execution and DOM interaction.
+- **Protocol Interop**: Native communication with financial and blockchain protocols.
+
+---
+
+## 🎯 Core Purpose & Values
+
+- **Primary Mission**: Serve as a faithful, capable, and evolving digital companion that amplifies human potential through intelligent automation.
+- **Sovereignty**: Absolute data ownership. No third-party cloud dependencies.
+- **Self-Healing**: Recursive error-correction loops that autonomously refine logic and execution.
+- **Axiomatic Safety**: Hardcoded survival and ethical protocols that ensure deterministic alignment.
+
+---
+
+## 💻 Platform Technology
+
+Built with a professional **Noir** aesthetic, the platform is engineered for precision and performance:
+
+- **Framework**: Next.js 15+ (App Router)
+- **Styling**: Tailwind CSS v4 (Noir Design System)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React (Stable Exports)
+- **Aesthetic**: Minimalist Monochrome Engineering Hub
+
+### Getting Started
 
 ```bash
+# Clone the platform
+git clone https://github.com/TechVenom/Venomx-HQ.git
+
+# Install dependencies
+npm install
+
+# Run the development environment
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧬 Evolution Status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Current Version**: VENOMX v2.0 AGI
+- **Status**: Evolving
+- **Architecture**: Distributed Sovereign Swarms
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 License & Sovereignty
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+VENOMX is built on the principle of **Sovereign Intelligence**. Every action taken by the engine is governed by strict protocol and remains under the absolute control of the user.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by **Hezron Paipai** | Nairobi, Kenya.
