@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "VENOMX | Sovereign Autonomous Intelligence Engine",
+  title: "VENOMX | The AGI Edge",
   description: "A high-fidelity framework for bridging cognitive reasoning with system-level execution. Engineered for sovereignty and autonomous labor.",
 };
 

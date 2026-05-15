@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="bg-noir-grid absolute inset-0 opacity-5" />
         
         <div className="relative z-10 flex flex-col items-center">
-          {/* Actual VenomX Logo */}
+          {/* VenomX Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -76,7 +76,7 @@ export default function HomePage() {
              <div className="w-64 h-64 border border-white/5 bg-zinc-950 flex flex-col items-center justify-center p-12 group hover:border-white transition-all duration-1000">
                 <img src="/logo512.png" alt="VenomX Logo" className="w-32 h-32 grayscale brightness-200 mb-6 group-hover:scale-110 transition-transform duration-700" />
                 <div className="text-center">
-                   <span className="text-2xl font-bold tracking-[0.5em] text-white block leading-none mb-2">VENOMX</span>
+                   <span className="text-2xl font-bold tracking-[0.5em] text-white block leading-none mb-2 uppercase">VENOMX</span>
                    <span className="text-[10px] font-bold tracking-[0.6em] text-[#3f3f46] uppercase">Technologies</span>
                 </div>
              </div>
@@ -102,13 +102,14 @@ export default function HomePage() {
              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white">System Status: Online</span>
           </motion.div>
           
+          {/* THE AGI EDGE - NEW HERO TITLE */}
           <motion.h1 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
             className="text-7xl md:text-9xl font-bold tracking-tighter mb-12 leading-none uppercase"
           >
-            VENOMX AGI.
+            The AGI Edge.
           </motion.h1>
           
           <motion.p 
@@ -117,7 +118,7 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.7 }}
             className="text-lg md:text-xl text-[#71717a] max-w-2xl mx-auto mb-20 leading-relaxed font-medium"
           >
-            A high-fidelity engine for bridging cognitive reasoning with system-level execution. 
+            VenomX is a high-fidelity engine for bridging cognitive reasoning with system-level execution. 
             Engineered for sovereignty, autonomy, and the next evolution of digital labor.
           </motion.p>
           
@@ -137,11 +138,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Rest of Product Content remains the same ─── */}
+      {/* ─── Differentiators ─── */}
       <section className="py-60 grid-container border-b border-[#27272a]">
         <div className="mb-40">
-          <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">The Framework Edge</h2>
-          <h3 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 uppercase">Why VenomX?</h3>
+          <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Engineering Excellence</h2>
+          <h3 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 uppercase">Beyond The Interface.</h3>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#27272a] border border-[#27272a]">
@@ -157,6 +158,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── Memory Tiering ─── */}
       <section id="framework" className="py-60 grid-container border-b border-[#27272a]">
         <div className="mb-40 flex flex-col md:flex-row justify-between items-end gap-12">
           <div className="max-w-3xl">
@@ -187,6 +189,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── Operational Logic ─── */}
       <section className="py-60 grid-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
           <div>
@@ -238,6 +241,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── Footer CTA ─── */}
       <section className="py-80 grid-container text-center border-t border-[#27272a]">
         <h2 className="text-5xl md:text-8xl font-bold tracking-tight mb-20 uppercase">Autonomous <br /> Tomorrow.</h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-16">
