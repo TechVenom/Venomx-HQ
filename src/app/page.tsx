@@ -62,9 +62,19 @@ export default function HomePage() {
   return (
     <div className="bg-black text-white min-h-screen selection:bg-white selection:text-black">
       {/* ─── Hero Section ─── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center border-b border-[#27272a]">
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center border-b border-[#27272a] overflow-hidden">
         <div className="bg-noir-grid absolute inset-0 opacity-10" />
         
+        {/* Real Hero Image Placeholder */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/hero-engine.png" 
+            alt="" 
+            className="w-full h-full object-cover opacity-20 grayscale"
+            onError={(e) => (e.currentTarget.style.display = 'none')}
+          />
+        </div>
+
         <div className="relative z-10 max-w-4xl pt-24">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -114,7 +124,7 @@ export default function HomePage() {
       <section className="py-40 grid-container border-b border-[#27272a]">
         <div className="mb-32">
           <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">The Framework Edge</h2>
-          <h3 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">Why VenomX?</h3>
+          <h3 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 uppercase">Why VenomX?</h3>
           <p className="text-[#71717a] max-w-2xl font-medium leading-relaxed">
             While traditional AI systems are confined to chat interfaces, VenomX is built for 
             high-fidelity autonomous labor.
@@ -136,13 +146,23 @@ export default function HomePage() {
 
       {/* ─── Cognitive Architecture (The 9-Tier Memory) ─── */}
       <section id="framework" className="py-40 grid-container border-b border-[#27272a]">
-        <div className="mb-32">
-          <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Cognitive Pipeline</h2>
-          <h3 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">9-Tier Memory Architecture</h3>
-          <p className="text-[#71717a] max-w-2xl font-medium leading-relaxed">
-            The engine utilizes a hierarchical memory stack to maintain high-concurrency context 
-            and long-term episodic recall.
-          </p>
+        <div className="mb-32 flex flex-col md:flex-row justify-between items-end gap-12">
+          <div className="max-w-2xl">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Cognitive Pipeline</h2>
+            <h3 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 uppercase">9-Tier Memory Architecture</h3>
+            <p className="text-[#71717a] font-medium leading-relaxed">
+              The engine utilizes a hierarchical memory stack to maintain high-concurrency context 
+              and long-term episodic recall.
+            </p>
+          </div>
+          <div className="w-full md:w-80 aspect-video border border-[#27272a] overflow-hidden group">
+             <img 
+               src="/images/memory-stack.png" 
+               alt="Memory Stack" 
+               className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all"
+               onError={(e) => (e.currentTarget.parentElement!.style.display = 'none')}
+             />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#27272a] border border-[#27272a]">
@@ -187,20 +207,31 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <div className="p-12 border border-[#27272a] aspect-square flex flex-col justify-between font-mono text-[11px] text-[#3f3f46] relative overflow-hidden">
+          <div className="border border-[#27272a] aspect-square flex flex-col font-mono text-[11px] text-[#3f3f46] relative overflow-hidden group">
              <div className="bg-noir-grid absolute inset-0 opacity-5" />
-             <div className="relative z-10 space-y-6">
-                <span className="text-white"># Status: Goal Identified</span><br />
-                <span>{"[OK] Initializing self-healing loop"}</span><br />
-                <span>{"[OK] Optimizing Claws for environment"}</span><br />
-                <span>{"[OK] Collective swarm synchronized"}</span><br /><br />
-                <span className="text-white">{"$ venomx run --autonomous-labor --level=max"}</span><br />
-                <span>{"[SUCCESS] Mission executed: System Refactored."}</span><br />
-                <span className="text-[#71717a]">{"// AGI Engine: Sovereign & Secure"}</span>
-             </div>
-             <div className="mt-auto border-t border-[#27272a] pt-8 flex items-center justify-between uppercase tracking-widest text-[8px] font-bold">
-                <span>Core Stable v4.9.0</span>
-                <span className="flex items-center gap-2"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> Full Sovereignty Active</span>
+             
+             {/* Real Claws Action Image */}
+             <img 
+               src="/images/claws-action.png" 
+               alt="Claws in action" 
+               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-60 transition-all z-0"
+               onError={(e) => (e.currentTarget.style.display = 'none')}
+             />
+
+             <div className="relative z-10 p-12 flex-1 flex flex-col justify-between">
+               <div className="space-y-6">
+                  <span className="text-white"># Status: Goal Identified</span><br />
+                  <span>{"[OK] Initializing self-healing loop"}</span><br />
+                  <span>{"[OK] Optimizing Claws for environment"}</span><br />
+                  <span>{"[OK] Collective swarm synchronized"}</span><br /><br />
+                  <span className="text-white">{"$ venomx run --autonomous-labor --level=max"}</span><br />
+                  <span>{"[SUCCESS] Mission executed: System Refactored."}</span><br />
+                  <span className="text-[#71717a]">{"// AGI Engine: Sovereign & Secure"}</span>
+               </div>
+               <div className="mt-auto border-t border-[#27272a] pt-8 flex items-center justify-between uppercase tracking-widest text-[8px] font-bold">
+                  <span>Core Stable v4.9.0</span>
+                  <span className="flex items-center gap-2"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> Full Sovereignty Active</span>
+               </div>
              </div>
           </div>
         </div>
@@ -211,7 +242,7 @@ export default function HomePage() {
         <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-16 uppercase">The Future of <br /> Digital Labor.</h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12">
           <Link href="/download" className="btn-noir btn-noir-primary px-16 py-5">
-            Deploy Engine
+            Get Engine
           </Link>
           <Link href="/contact" className="btn-noir btn-noir-secondary px-16 py-5">
             Talk to Engineering

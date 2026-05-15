@@ -44,6 +44,16 @@ export default function SkillsPage() {
         </p>
       </div>
 
+      {/* Marketplace Overview Visual */}
+      <div className="grid-container mb-20 border border-[#27272a] aspect-[21/9] overflow-hidden group">
+         <img 
+           src="/images/skills-marketplace.png" 
+           alt="Skills Marketplace" 
+           className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-100 transition-all"
+           onError={(e) => (e.currentTarget.parentElement!.style.display = 'none')}
+         />
+      </div>
+
       {/* Categories Grid */}
       <div className="grid-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-[#27272a] mb-40 border border-[#27272a]">
         {categories.map((cat, i) => (
@@ -105,7 +115,16 @@ export default function SkillsPage() {
               ))}
             </div>
           </div>
-          <div className="lg:w-1/2 w-full p-12 border border-[#27272a] font-mono text-[11px] leading-relaxed text-[#71717a]">
+          <div className="md:w-1/2 relative overflow-hidden group">
+            {/* Desktop Client Screenshot */}
+            <img 
+              src="/images/desktop-client.png" 
+              alt="Desktop Client" 
+              className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-80 transition-all z-0"
+              onError={(e) => (e.currentTarget.style.display = 'none')}
+            />
+
+            <div className="relative z-10 p-12 border border-[#27272a] font-mono text-[11px] leading-relaxed text-[#71717a]">
             <div className="flex gap-2 mb-8 opacity-20">
                <div className="w-2 h-2 bg-white" />
                <div className="w-2 h-2 bg-white" />

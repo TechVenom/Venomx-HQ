@@ -53,7 +53,16 @@ export default function DownloadPage() {
             </ul>
           </div>
           
-          <div className="md:w-1/2 flex flex-col gap-px bg-[#27272a] border border-[#27272a]">
+          <div className="md:w-1/2 relative overflow-hidden group">
+            {/* Desktop Client Screenshot */}
+            <img 
+              src="/images/desktop-client.png" 
+              alt="Desktop Client" 
+              className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-80 transition-all z-0"
+              onError={(e) => (e.currentTarget.style.display = 'none')}
+            />
+
+            <div className="relative z-10 flex flex-col gap-px bg-[#27272a] border border-[#27272a]">
             {platforms.map((p, i) => (
               <div key={i} className={`bg-black p-8 ${p.primary ? "" : "opacity-20"}`}>
                 <div className="flex justify-between items-center mb-6">

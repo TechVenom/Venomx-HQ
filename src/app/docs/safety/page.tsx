@@ -29,6 +29,17 @@ export default function SafetyDocsPage() {
           </p>
         </div>
 
+        <div className="grid grid-cols-1 gap-px bg-[#27272a] border border-[#27272a] mb-12">
+          <div className="bg-black p-4 aspect-[21/9] overflow-hidden group">
+             <img 
+               src="/images/security-protocol.png" 
+               alt="Security Protocol" 
+               className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-100 transition-all"
+               onError={(e) => (e.currentTarget.parentElement!.style.display = 'none')}
+             />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 gap-px bg-[#27272a] border border-[#27272a]">
           {axioms.map((axiom, i) => (
             <div key={i} className="bg-black p-12 hover:bg-white hover:text-black transition-all group">

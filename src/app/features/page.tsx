@@ -102,6 +102,37 @@ export default function FeaturesPage() {
         ))}
       </section>
 
+      {/* Swarm Section */}
+      <section className="grid-container mt-60">
+        <div className="border border-[#27272a] p-24 relative overflow-hidden group">
+          <div className="bg-noir-grid absolute inset-0 opacity-10" />
+          
+          {/* Swarm Screenshot */}
+          <img 
+            src="/images/swarm-nodes.png" 
+            alt="Swarm Nodes" 
+            className="absolute inset-0 w-full h-full object-cover grayscale opacity-10 group-hover:opacity-30 transition-all z-0"
+            onError={(e) => (e.currentTarget.style.display = 'none')}
+          />
+
+          <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
+             <div className="w-16 h-16 border border-[#27272a] flex items-center justify-center mb-12 bg-black">
+               <Globe className="w-6 h-6 text-white" />
+             </div>
+             <h3 className="text-4xl font-bold mb-8 uppercase tracking-tight">Collective Swarms.</h3>
+             <p className="text-[#71717a] text-sm leading-relaxed mb-12 font-medium">
+               Deploy multi-agent nodes across private infrastructure. VenomX orchestrates 
+               synchronized intelligence, allowing nodes to share collective memory and 
+               procedural knowledge in real-time.
+             </p>
+             <div className="flex gap-12 text-[10px] font-bold uppercase tracking-[0.4em] text-white">
+                <span className="flex items-center gap-3"><div className="w-2 h-2 bg-white" /> Decentralized Nodes</span>
+                <span className="flex items-center gap-3"><div className="w-2 h-2 bg-white" /> Shared Epidsodic Recall</span>
+             </div>
+          </div>
+        </div>
+      </section>
+
       {/* System Agency Block */}
       <section className="grid-container mt-60">
         <div className="border border-[#27272a] p-24 relative overflow-hidden">
