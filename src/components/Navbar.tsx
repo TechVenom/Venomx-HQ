@@ -26,7 +26,7 @@ export const Navbar = () => {
 
   const socialLinks = [
     { icon: Globe, name: "GitHub", href: "https://github.com/TechVenom" },
-    { icon: MessageSquare, name: "WhatsApp", href: "https://wa.me/254712345678" },
+    { icon: MessageSquare, name: "Status", href: "#" },
     { icon: Mail, name: "Email", href: "mailto:venomx.agent.future@proton.me" },
   ];
 
@@ -38,21 +38,21 @@ export const Navbar = () => {
         }`}
       >
         <div className="max-w-[1600px] mx-auto px-10 flex justify-between items-center">
-          {/* Brand Identity */}
+          {/* Brand Identity - VENOMX */}
           <Link href="/" className="flex items-center gap-6 group">
-            <div className="w-12 h-12 border border-white flex items-center justify-center font-bold text-sm group-hover:bg-white group-hover:text-black transition-all duration-500">
-              HP
+            <div className="w-12 h-12 border border-white flex items-center justify-center overflow-hidden">
+               <img src="/favicon.png" alt="VX" className="w-8 h-8 grayscale brightness-200" />
             </div>
             <div className="flex flex-col">
-              <span className="text-sm font-bold tracking-tight text-white uppercase leading-none mb-1">Hezron <span className="text-[#3f3f46]">Paipai</span></span>
-              <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-[#3f3f46]">VenomX Technologies</span>
+              <span className="text-xl font-bold tracking-tight text-white uppercase leading-none mb-1">VENOMX</span>
+              <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-[#3f3f46]">Autonomous Intelligence</span>
             </div>
           </Link>
 
-          {/* Sidebar Trigger (Clean Sidebar Navigation) */}
+          {/* Sidebar Trigger */}
           <div className="flex items-center gap-12">
             <Link href="/download" className="hidden md:block text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:opacity-50 transition-opacity">
-              Resume
+              Get Engine
             </Link>
             <button 
               onClick={() => setIsOpen(true)}
@@ -86,7 +86,7 @@ export const Navbar = () => {
               className="fixed top-0 right-0 bottom-0 w-full max-w-xl bg-black border-l border-white/5 z-[70] p-16 md:p-24 flex flex-col"
             >
               <div className="flex justify-between items-center mb-24">
-                <div className="text-[10px] font-bold uppercase tracking-[0.6em] text-[#3f3f46]">Sector Navigation</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.6em] text-[#3f3f46]">Core Navigation</div>
                 <button 
                   onClick={() => setIsOpen(false)}
                   className="w-16 h-16 border border-white/5 flex items-center justify-center hover:border-white transition-all duration-500"
@@ -113,10 +113,10 @@ export const Navbar = () => {
 
               <div className="mt-auto grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-white/5">
                 <div>
-                   <div className="text-[10px] font-bold uppercase tracking-[0.5em] text-[#3f3f46] mb-8">Contact Node</div>
+                   <div className="text-[10px] font-bold uppercase tracking-[0.5em] text-[#3f3f46] mb-8">Engineering HQ</div>
                    <p className="text-sm text-[#71717a] font-medium leading-relaxed">
                      venomx.agent.future@proton.me<br />
-                     Nairobi, Kenya [HQ]
+                     Sovereign Logic Tier-1
                    </p>
                 </div>
                 <div className="flex flex-col gap-4">

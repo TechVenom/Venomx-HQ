@@ -62,29 +62,22 @@ export default function HomePage() {
 
   return (
     <div className="bg-black text-white min-h-screen selection:bg-white selection:text-black">
-      {/* ─── Hero Section (Portfolio Style) ─── */}
+      {/* ─── Hero Section ─── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center border-b border-[#27272a] overflow-hidden">
         <div className="bg-noir-grid absolute inset-0 opacity-5" />
         
         <div className="relative z-10 flex flex-col items-center">
-          {/* Company Logo - PLACED ABOVE SUBTITLE */}
+          {/* Actual VenomX Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="mb-12"
           >
-             <div className="w-56 h-56 border border-white/10 bg-zinc-950 flex flex-col items-center justify-center p-10 group hover:border-white transition-all duration-1000">
-                <div className="w-20 h-20 mb-6 flex items-center justify-center">
-                   {/* Abstract VX Logo Implementation */}
-                   <div className="relative w-full h-full flex items-center justify-center">
-                      <div className="absolute w-full h-1 bg-white rotate-45 transform origin-center" />
-                      <div className="absolute w-full h-1 bg-white -rotate-45 transform origin-center translate-x-4" />
-                      <div className="absolute w-6 h-6 border-2 border-white rounded-full -translate-x-4" />
-                   </div>
-                </div>
+             <div className="w-64 h-64 border border-white/5 bg-zinc-950 flex flex-col items-center justify-center p-12 group hover:border-white transition-all duration-1000">
+                <img src="/logo512.png" alt="VenomX Logo" className="w-32 h-32 grayscale brightness-200 mb-6 group-hover:scale-110 transition-transform duration-700" />
                 <div className="text-center">
-                   <span className="text-2xl font-bold tracking-[0.4em] text-white block leading-none mb-1">VENOMX</span>
-                   <span className="text-[9px] font-bold tracking-[0.5em] text-[#3f3f46] uppercase">Technologies</span>
+                   <span className="text-2xl font-bold tracking-[0.5em] text-white block leading-none mb-2">VENOMX</span>
+                   <span className="text-[10px] font-bold tracking-[0.6em] text-[#3f3f46] uppercase">Technologies</span>
                 </div>
              </div>
           </motion.div>
@@ -93,12 +86,12 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-[10px] font-bold uppercase tracking-[0.6em] text-[#3f3f46] mb-12"
+            className="text-[10px] font-bold uppercase tracking-[0.8em] text-[#3f3f46] mb-12"
           >
             Sovereign Autonomous Intelligence
           </motion.div>
 
-          {/* Status Pill */}
+          {/* System Status Pill */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -106,16 +99,16 @@ export default function HomePage() {
             className="inline-flex items-center gap-3 px-6 py-2 border border-white/10 rounded-full mb-16 bg-zinc-950/50"
           >
              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white">Available For Work</span>
+             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white">System Status: Online</span>
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-6xl md:text-9xl font-bold tracking-tighter mb-12 leading-none uppercase"
+            className="text-7xl md:text-9xl font-bold tracking-tighter mb-12 leading-none uppercase"
           >
-            Hezron Paipai
+            VENOMX AGI.
           </motion.h1>
           
           <motion.p 
@@ -124,8 +117,8 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.7 }}
             className="text-lg md:text-xl text-[#71717a] max-w-2xl mx-auto mb-20 leading-relaxed font-medium"
           >
-            Lead Engineer & Architect at VenomX Technologies. 
-            Designing sovereign systems for the next evolution of autonomous digital labor.
+            A high-fidelity engine for bridging cognitive reasoning with system-level execution. 
+            Engineered for sovereignty, autonomy, and the next evolution of digital labor.
           </motion.p>
           
           <motion.div 
@@ -135,16 +128,16 @@ export default function HomePage() {
             className="flex flex-col sm:flex-row items-center justify-center gap-12"
           >
             <Link href="/download" className="btn-noir btn-noir-primary px-16 py-5">
-              Get Resume
+              Deploy Engine
             </Link>
-            <Link href="/contact" className="btn-noir btn-noir-secondary px-16 py-5">
-              Contact HQ
+            <Link href="/features" className="btn-noir btn-noir-secondary px-16 py-5">
+              Explore Architecture
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* ─── Engine Differentiators ─── */}
+      {/* ─── Rest of Product Content remains the same ─── */}
       <section className="py-60 grid-container border-b border-[#27272a]">
         <div className="mb-40">
           <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">The Framework Edge</h2>
@@ -164,7 +157,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── 9-Tier Memory ─── */}
       <section id="framework" className="py-60 grid-container border-b border-[#27272a]">
         <div className="mb-40 flex flex-col md:flex-row justify-between items-end gap-12">
           <div className="max-w-3xl">
@@ -195,8 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Operational Logic ─── */}
-      <section className="py-60 grid-container border-b border-[#27272a]">
+      <section className="py-60 grid-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
           <div>
             <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Operational Logic</h2>
@@ -239,23 +230,22 @@ export default function HomePage() {
                   <span>{"[SUCCESS] Mission executed: System Refactored."}</span>
                </div>
                <div className="mt-auto border-t border-white/5 pt-12 flex items-center justify-between uppercase tracking-widest text-[9px] font-bold">
-                  <span>Hezron Paipai | Lead Engineer</span>
-                  <span className="flex items-center gap-2"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> Full Sovereignty</span>
+                  <span>VenomX Core | v2.0 AGI</span>
+                  <span className="flex items-center gap-2"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> Operational</span>
                </div>
              </div>
           </div>
         </div>
       </section>
 
-      {/* ─── Professional Footer CTA ─── */}
-      <section className="py-80 grid-container text-center">
-        <h2 className="text-5xl md:text-8xl font-bold tracking-tight mb-20 uppercase">Engineering <br /> Tomorrow.</h2>
+      <section className="py-80 grid-container text-center border-t border-[#27272a]">
+        <h2 className="text-5xl md:text-8xl font-bold tracking-tight mb-20 uppercase">Autonomous <br /> Tomorrow.</h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-16">
           <Link href="/contact" className="btn-noir btn-noir-primary px-20 py-6">
             Get in Touch
           </Link>
           <a href="mailto:venomx.agent.future@proton.me" className="btn-noir btn-noir-secondary px-20 py-6">
-            Email Me
+            Contact HQ
           </a>
         </div>
       </section>
