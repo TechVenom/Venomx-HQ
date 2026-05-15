@@ -34,10 +34,10 @@ export default function SkillsPage() {
   ];
 
   return (
-    <div className="pt-48 pb-40 bg-black min-h-screen">
+    <div className="pt-48 pb-40 bg-black min-h-screen selection:bg-white selection:text-black">
       <div className="grid-container mb-40">
         <h1 className="text-[10px] font-bold uppercase tracking-[0.5em] text-[#71717a] mb-12">Skills Marketplace</h1>
-        <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-12">Extend the Engine.</h2>
+        <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-12 uppercase">Extend the Engine.</h2>
         <p className="text-xl text-[#71717a] max-w-2xl leading-relaxed font-medium">
           A library of 49+ specialized production tools. Deploy new capabilities 
           to your swarms in seconds.
@@ -45,7 +45,7 @@ export default function SkillsPage() {
       </div>
 
       {/* Marketplace Overview Visual */}
-      <div className="grid-container mb-20 border border-[#27272a] aspect-[21/9] overflow-hidden group">
+      <div className="grid-container mb-20 border border-[#27272a] aspect-[21/9] overflow-hidden group relative">
          <img 
            src="/images/skills-marketplace.png" 
            alt="Skills Marketplace" 
@@ -69,7 +69,7 @@ export default function SkillsPage() {
       <div className="grid-container mb-60">
         <div className="flex justify-between items-end mb-20 border-b border-[#27272a] pb-12">
           <div>
-            <h3 className="text-3xl font-bold tracking-tight uppercase tracking-widest">Featured Skills</h3>
+            <h3 className="text-3xl font-bold tracking-tighter uppercase tracking-widest">Featured Skills</h3>
             <p className="text-sm text-[#71717a] mt-2 font-medium">Verified production-ready modules.</p>
           </div>
           <div className="text-[10px] font-bold uppercase tracking-widest flex items-center gap-3">
@@ -86,7 +86,7 @@ export default function SkillsPage() {
                 </span>
                 <Plus className="w-4 h-4 opacity-10" />
               </div>
-              <h4 className="text-xl font-bold mb-6 tracking-tight">{skill.title}</h4>
+              <h4 className="text-xl font-bold mb-6 tracking-tight uppercase">{skill.title}</h4>
               <p className="text-xs text-[#71717a] group-hover:text-black leading-relaxed mb-12 font-medium">{skill.desc}</p>
               <button className="mt-auto w-full py-4 border border-[#27272a] group-hover:border-black text-[10px] font-bold uppercase tracking-[0.3em] transition-all">
                 Install Skill
@@ -97,10 +97,10 @@ export default function SkillsPage() {
       </div>
 
       {/* Registration Walkthrough */}
-      <section className="grid-container">
-        <div className="noir-card flex flex-col lg:flex-row gap-20 items-center">
-          <div className="lg:w-1/2">
-            <h3 className="text-3xl font-bold mb-8">Modular Runtime</h3>
+      <section className="grid-container pb-40">
+        <div className="noir-card flex flex-col lg:flex-row gap-20 items-stretch">
+          <div className="lg:w-1/2 py-10">
+            <h3 className="text-3xl font-bold mb-8 uppercase tracking-tight">Modular Runtime</h3>
             <div className="space-y-12">
               {[
                 { title: "Standardized Interface", desc: "Every skill follows a strict cognitive protocol for seamless core integration." },
@@ -115,28 +115,30 @@ export default function SkillsPage() {
               ))}
             </div>
           </div>
-          <div className="md:w-1/2 relative overflow-hidden group">
-            {/* Desktop Client Screenshot */}
+          
+          <div className="lg:w-1/2 relative overflow-hidden group border-l border-[#27272a] bg-[#0a0a0a]">
+            {/* Background Screenshot Placeholder */}
             <img 
-              src="/images/desktop-client.png" 
-              alt="Desktop Client" 
-              className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-80 transition-all z-0"
+              src="/images/skills-marketplace.png" 
+              alt="Installation" 
+              className="absolute inset-0 w-full h-full object-cover grayscale opacity-10 group-hover:opacity-40 transition-all z-0"
               onError={(e) => (e.currentTarget.style.display = 'none')}
             />
 
-            <div className="relative z-10 p-12 border border-[#27272a] font-mono text-[11px] leading-relaxed text-[#71717a]">
-            <div className="flex gap-2 mb-8 opacity-20">
-               <div className="w-2 h-2 bg-white" />
-               <div className="w-2 h-2 bg-white" />
-               <div className="w-2 h-2 bg-white" />
+            <div className="relative z-10 p-12 font-mono text-[11px] leading-relaxed text-[#71717a]">
+              <div className="flex gap-2 mb-12 opacity-20">
+                <div className="w-2 h-2 bg-white" />
+                <div className="w-2 h-2 bg-white" />
+                <div className="w-2 h-2 bg-white" />
+              </div>
+              <span className="text-white font-bold">$ venomx install vnmx-finance-oracle</span>
+              <br /><br />
+              <span>[OK] Protocol verified (SHA-256)</span><br />
+              <span>[OK] Dependencies satisfied</span><br />
+              <span className="text-white font-bold tracking-widest uppercase mt-4 block">[SUCCESS] Module registered to Core Swarm.</span>
+              <br /><br />
+              <span className="text-[#3f3f46]"># Ready for execution.</span>
             </div>
-            <span className="text-white">$ venomx install vnmx-finance-oracle</span>
-            <br /><br />
-            <span>[OK] Protocol verified (SHA-256)</span><br />
-            <span>[OK] Dependencies satisfied</span><br />
-            <span className="text-white font-bold">[SUCCESS] Module registered to Core Swarm.</span>
-            <br /><br />
-            <span># Ready for execution.</span>
           </div>
         </div>
       </section>
