@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Shield, Lock, Eye, Zap } from "lucide-react";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function SafetyDocsPage() {
   const axioms = [
@@ -65,6 +66,7 @@ export default function SafetyDocsPage() {
           to external prompts.
         </p>
       </section>
+      <PageNavigation />
     </div>
   );
 }

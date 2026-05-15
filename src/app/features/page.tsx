@@ -19,6 +19,7 @@ import {
   Lock,
   Workflow
 } from "lucide-react";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function FeaturesPage() {
   const agiFeatures = [
@@ -155,6 +156,7 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
+      <PageNavigation />
     </div>
   );
 }

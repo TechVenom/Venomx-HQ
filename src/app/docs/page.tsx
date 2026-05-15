@@ -3,6 +3,7 @@
 import React from "react";
 import { ArrowRight, Book, Terminal, Cpu, Shield, Zap } from "lucide-react";
 import Link from "next/link";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function DocsPage() {
   const cards = [
@@ -66,6 +67,7 @@ export default function DocsPage() {
           </Link>
         </div>
       </section>
+      <PageNavigation />
     </div>
   );
 }

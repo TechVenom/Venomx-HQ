@@ -11,6 +11,7 @@ import {
   Cpu,
   Shield
 } from "lucide-react";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function DownloadPage() {
   const platforms = [
@@ -134,6 +135,7 @@ export default function DownloadPage() {
           </div>
         </div>
       </section>
+      <PageNavigation />
     </div>
   );
 }

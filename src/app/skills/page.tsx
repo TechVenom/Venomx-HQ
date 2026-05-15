@@ -13,6 +13,7 @@ import {
   Layers,
   Search
 } from "lucide-react";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function SkillsPage() {
   const categories = [
@@ -142,6 +143,7 @@ export default function SkillsPage() {
           </div>
         </div>
       </section>
+      <PageNavigation />
     </div>
   );
 }

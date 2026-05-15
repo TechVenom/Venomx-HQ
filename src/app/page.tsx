@@ -23,6 +23,7 @@ import {
   RefreshCcw,
   Briefcase
 } from "lucide-react";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function HomePage() {
   const memoryTiers = [
@@ -252,7 +253,8 @@ export default function HomePage() {
             Contact HQ
           </a>
         </div>
-      </section>
+      {/* ─── Page Navigation ─── */}
+      <PageNavigation />
     </div>
   );
 }
