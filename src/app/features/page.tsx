@@ -105,18 +105,17 @@ export default function FeaturesPage() {
 
       {/* Swarm Section */}
       <section className="grid-container mt-60">
-        <div className="border border-[#27272a] p-24 relative overflow-hidden group">
+        <div className="border border-[#27272a] p-24 relative overflow-hidden group min-h-[400px] flex items-center">
           <div className="bg-noir-grid absolute inset-0 opacity-10" />
           
-          {/* Swarm Screenshot */}
+          {/* Swarm Screenshot - Using Skill Matrix for Ecosystem visualization */}
           <img 
-            src="/images/swarm-nodes.png" 
-            alt="Swarm Nodes" 
-            className="absolute inset-0 w-full h-full object-cover grayscale opacity-10 group-hover:opacity-30 transition-all z-0"
-            onError={(e) => (e.currentTarget.style.display = 'none')}
+            src="/screenshots/vnmx_skill_matrix_ecosystem.png" 
+            alt="Skill Matrix Ecosystem" 
+            className="absolute inset-0 w-full h-full object-cover grayscale opacity-10 group-hover:opacity-40 transition-all duration-1000 z-0"
           />
 
-          <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
+          <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto bg-black/40 backdrop-blur-md p-12 border border-white/5">
              <div className="w-16 h-16 border border-[#27272a] flex items-center justify-center mb-12 bg-black">
                <Globe className="w-6 h-6 text-white" />
              </div>
@@ -134,10 +133,49 @@ export default function FeaturesPage() {
         </div>
       </section>
 
+      {/* Model Routing Section - NEW */}
+      <section className="grid-container mt-40">
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#27272a] border border-[#27272a]">
+            <div className="bg-black p-24 flex flex-col justify-center">
+               <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Infrastructure</h2>
+               <h3 className="text-4xl font-bold mb-8 uppercase tracking-tight">Dynamic Model Routing.</h3>
+               <p className="text-[#71717a] text-sm leading-relaxed mb-12 font-medium">
+                  VenomX features a sophisticated model orchestration engine. It dynamically 
+                  routes tasks (Vision, Coding, Fast Logic) to the most efficient LLM node 
+                  based on complexity and performance requirements.
+               </p>
+               <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                     <div className="w-2 h-2 bg-emerald-500" />
+                     <span className="text-[10px] font-bold uppercase tracking-widest text-white">Vision Core: Qwen-VL / Gemini-Pro</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                     <div className="w-2 h-2 bg-emerald-500" />
+                     <span className="text-[10px] font-bold uppercase tracking-widest text-white">Logic Engine: GPT-OSS / Claude-Opus</span>
+                  </div>
+               </div>
+            </div>
+            <div className="bg-black p-4 group overflow-hidden">
+               <img 
+                 src="/screenshots/vnmx_performance_routing_engine.png" 
+                 alt="Performance Routing" 
+                 className="w-full grayscale group-hover:grayscale-0 transition-all duration-1000 border border-white/5"
+               />
+            </div>
+         </div>
+      </section>
+
       {/* System Agency Block */}
-      <section className="grid-container mt-60">
-        <div className="border border-[#27272a] p-24 relative overflow-hidden">
+      <section className="grid-container mt-40">
+        <div className="border border-[#27272a] p-24 relative overflow-hidden group">
           <div className="bg-noir-grid absolute inset-0 opacity-10" />
+          
+          <img 
+            src="/screenshots/vnmx_multi_tool_task_orchestration.png" 
+            alt="Multi-Tool Orchestration" 
+            className="absolute inset-0 w-full h-full object-cover grayscale opacity-10 group-hover:opacity-30 transition-all duration-1000 z-0"
+          />
+
           <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
              <div className="w-16 h-16 border border-[#27272a] flex items-center justify-center mb-12">
                <Workflow className="w-6 h-6 text-white" />

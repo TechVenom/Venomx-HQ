@@ -8,8 +8,8 @@ import { PageNavigation } from "@/components/PageNavigation";
 export default function DocsPage() {
   const cards = [
     { title: "Installation", desc: "Set up the VENOMX runtime and environment.", icon: Terminal, href: "/docs/install" },
-    { title: "Core Concepts", desc: "Learn about memory, tools, and autonomy.", icon: Book, href: "/docs/concepts" },
-    { title: "Custom Skills", desc: "How to build and register new capabilities.", icon: Cpu, href: "/docs/custom-skills" },
+    { title: "Quick Start", desc: "Get your first node operational in 5 minutes.", icon: Zap, href: "/docs/quickstart" },
+    { title: "Memory Stack", desc: "Learn about the 9-tier cognitive memory architecture.", icon: Book, href: "/docs/memory" },
     { title: "Security", desc: "Understanding survival axioms and safety.", icon: Shield, href: "/docs/safety" }
   ];
 

@@ -139,7 +139,79 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Differentiators ─── */}
+      {/* ─── LIVE OPERATIONAL EVIDENCE ─── */}
+      <section className="py-40 bg-[#09090b] border-b border-[#27272a] overflow-hidden">
+        <div className="grid-container mb-24 text-center">
+           <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Mission Control Telemetry</h2>
+           <h3 className="text-4xl md:text-8xl font-bold tracking-tight mb-8 uppercase">Neural Evidence.</h3>
+           <p className="text-[#71717a] max-w-2xl mx-auto font-medium">
+             Direct evidence of sovereign AGI orchestration. Witness the transition from 
+             high-level intent to multi-vector system execution.
+           </p>
+        </div>
+
+        {/* Global Intel Map */}
+        <div className="grid-container mb-12">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative group border border-white/5 bg-black p-4 cursor-crosshair"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-60" />
+            <img 
+              src="/screenshots/vnmx_global_dashboard_intel_map.png" 
+              alt="Global Situation Dashboard" 
+              className="w-full grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000"
+            />
+            <div className="absolute bottom-12 left-12 z-20">
+               <span className="text-[10px] font-bold uppercase tracking-widest bg-white text-black px-4 py-2">Mission Control: Global Intelligence Map</span>
+               <p className="text-[9px] text-white/40 mt-4 uppercase tracking-[0.3em]">3D Visualization of global conflict vectors and autonomous node status.</p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Core Logic side-by-side */}
+        <div className="grid-container grid grid-cols-1 md:grid-cols-2 gap-12">
+          <Link href="/features#reasoning" className="group border border-white/5 bg-black p-8 hover:border-white/20 transition-all">
+            <div className="flex justify-between items-center mb-12">
+               <h4 className="text-xs font-bold uppercase tracking-[0.4em]">Neural Reasoning (CoT)</h4>
+               <ArrowRight className="w-4 h-4 text-[#3f3f46] group-hover:text-white transition-all" />
+            </div>
+            <div className="aspect-video mb-8 overflow-hidden border border-white/5 bg-zinc-950">
+               <img 
+                 src="/screenshots/vnmx_live_execution_neural_reasoning.png" 
+                 alt="Neural Reasoning" 
+                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+               />
+            </div>
+            <p className="text-[10px] text-[#71717a] font-medium leading-relaxed group-hover:text-white/60 transition-colors">
+              Real-time visualization of the agent's internal reasoning chain. Every action 
+              is preceded by a self-correcting logic cycle that analyzes mission parameters.
+            </p>
+          </Link>
+
+          <Link href="/features#agency" className="group border border-white/5 bg-black p-8 hover:border-white/20 transition-all">
+            <div className="flex justify-between items-center mb-12">
+               <h4 className="text-xs font-bold uppercase tracking-[0.4em]">Autonomous Orchestration</h4>
+               <ArrowRight className="w-4 h-4 text-[#3f3f46] group-hover:text-white transition-all" />
+            </div>
+            <div className="aspect-video mb-8 overflow-hidden border border-white/5 bg-zinc-950">
+               <img 
+                 src="/screenshots/vnmx_multi_tool_task_orchestration.png" 
+                 alt="Multi-Tool Orchestration" 
+                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+               />
+            </div>
+            <p className="text-[10px] text-[#71717a] font-medium leading-relaxed group-hover:text-white/60 transition-colors">
+              Handling high-complexity digital labor through parallel tool execution. 
+              The engine manages file I/O, web recon, and terminal commands in a unified loop.
+            </p>
+          </Link>
+        </div>
+      </section>
+
+      {/* ─── ENGINEERING EXCELLENCE CARDS ─── */}
       <section className="py-60 grid-container border-b border-[#27272a]">
         <div className="mb-40">
           <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Engineering Excellence</h2>
@@ -147,98 +219,198 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#27272a] border border-[#27272a]">
-          {agiDifferentiators.map((d, i) => (
-            <div key={i} className="bg-black p-20 hover:bg-white hover:text-black transition-all group">
-               <div className="w-16 h-16 border border-[#27272a] group-hover:border-black flex items-center justify-center mb-16">
-                  <d.icon className="w-6 h-6" />
-               </div>
-               <h4 className="text-3xl font-bold mb-8 uppercase tracking-tighter">{d.title}</h4>
-               <p className="text-sm text-[#71717a] group-hover:text-black font-medium leading-relaxed">{d.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── Memory Tiering ─── */}
-      <section id="framework" className="py-60 grid-container border-b border-[#27272a]">
-        <div className="mb-40 flex flex-col md:flex-row justify-between items-end gap-12">
-          <div className="max-w-3xl">
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Cognitive Pipeline</h2>
-            <h3 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 uppercase">9-Tier Memory Architecture</h3>
-          </div>
-          <div className="w-full md:w-96 aspect-video border border-[#27272a] overflow-hidden group">
-             <img 
-               src="/images/memory-stack.png" 
-               alt="Memory Stack" 
-               className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all duration-700"
-               onError={(e) => (e.currentTarget.parentElement!.style.display = 'none')}
-             />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#27272a] border border-[#27272a]">
-          {memoryTiers.map((tier, i) => (
-            <div key={i} className="bg-black p-16 hover:bg-white hover:text-black transition-all group">
-              <div className="flex justify-between items-center mb-16">
-                 <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-[#3f3f46] group-hover:text-black border border-[#27272a] group-hover:border-black px-3 py-1">Node 0{i+1}</span>
-                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#71717a] group-hover:text-black opacity-40">{tier.type}</span>
-              </div>
-              <h4 className="text-3xl font-bold mb-8 tracking-tighter uppercase">{tier.name}</h4>
-              <p className="text-xs text-[#71717a] group-hover:text-black leading-relaxed font-medium">{tier.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── Operational Logic ─── */}
-      <section className="py-60 grid-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
-          <div>
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Operational Logic</h2>
-            <h3 className="text-4xl md:text-7xl font-bold tracking-tight mb-12 uppercase">The Claws <br /> Framework.</h3>
-            <p className="text-[#71717a] font-medium leading-relaxed mb-16 text-lg">
-              VenomX interacts with the digital world through "Claws"—bridging the gap 
-              between AI reasoning and system-level execution.
-            </p>
-            <div className="space-y-12">
-              {[
-                { title: "Hardware Agency", desc: "Direct communication with local system primitives.", icon: Cpu },
-                { title: "Goal-Oriented Reasoning", desc: "The engine solves for outcomes, not just text responses.", icon: Command },
-                { title: "Axiomatic Safety", desc: "Hardcoded survival protocols that cannot be overridden.", icon: Shield }
-              ].map((f, i) => (
-                <div key={i} className="flex gap-8">
-                  <div className="w-12 h-12 border border-[#27272a] flex items-center justify-center flex-shrink-0">
-                    <f.icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-3">{f.title}</h4>
-                    <p className="text-xs text-[#71717a] font-medium leading-relaxed">{f.desc}</p>
-                  </div>
+          <Link href="/features#sovereignty" className="bg-black p-20 hover:bg-white hover:text-black transition-all group relative overflow-hidden flex flex-col justify-between min-h-[500px]">
+             <img src="/screenshots/vnmx_auth_neural_login.png" className="absolute right-0 top-0 w-80 grayscale opacity-5 group-hover:opacity-10 transition-all duration-1000 group-hover:scale-110" />
+             <div className="relative z-10">
+                <div className="w-16 h-16 border border-[#27272a] group-hover:border-black flex items-center justify-center mb-16">
+                   <Shield className="w-6 h-6" />
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="border border-[#27272a] aspect-square flex flex-col font-mono text-[11px] text-[#3f3f46] relative overflow-hidden group">
-             <div className="bg-noir-grid absolute inset-0 opacity-5" />
-             <img 
-               src="/images/claws-action.png" 
-               alt="Claws Action" 
-               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-60 transition-all duration-1000 z-0"
-               onError={(e) => (e.currentTarget.style.display = 'none')}
-             />
-             <div className="relative z-10 p-16 flex-1 flex flex-col justify-between bg-black/60 backdrop-blur-sm">
-               <div className="space-y-8">
-                  <span className="text-white"># Status: Goal Identified</span><br />
-                  <span>{"[OK] Initializing self-healing loop"}</span><br />
-                  <span className="text-white">{"$ venomx run --autonomous-labor --level=max"}</span><br />
-                  <span>{"[SUCCESS] Mission executed: System Refactored."}</span>
-               </div>
-               <div className="mt-auto border-t border-white/5 pt-12 flex items-center justify-between uppercase tracking-widest text-[9px] font-bold">
-                  <span>VenomX Core | v2.0 AGI</span>
-                  <span className="flex items-center gap-2"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> Operational</span>
-               </div>
+                <h4 className="text-4xl font-bold mb-8 uppercase tracking-tighter">Sovereign Autonomy</h4>
+                <p className="text-sm text-[#71717a] group-hover:text-black font-medium leading-relaxed max-w-sm">Local-first engine. Every reasoning loop happens within your secure infrastructure, ensuring absolute data ownership via neural-encrypted credentials.</p>
              </div>
-          </div>
+             <div className="relative z-10 mt-12 flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+                Explore Sovereignty <ArrowRight className="w-3 h-3" />
+             </div>
+          </Link>
+          
+          <Link href="/features#agency" className="bg-black p-20 hover:bg-white hover:text-black transition-all group relative overflow-hidden flex flex-col justify-between min-h-[500px]">
+             <img src="/screenshots/vnmx_dashboard_neural_interface.png" className="absolute right-0 top-0 w-80 grayscale opacity-5 group-hover:opacity-10 transition-all duration-1000 group-hover:scale-110" />
+             <div className="relative z-10">
+                <div className="w-16 h-16 border border-[#27272a] group-hover:border-black flex items-center justify-center mb-16">
+                   <CpuIcon className="w-6 h-6" />
+                </div>
+                <h4 className="text-4xl font-bold mb-8 uppercase tracking-tighter">System-Level Agency</h4>
+                <p className="text-sm text-[#71717a] group-hover:text-black font-medium leading-relaxed max-w-sm">Direct interaction with OS-level primitives. VenomX operates your terminal, file systems, and networks with administrative authority.</p>
+             </div>
+             <div className="relative z-10 mt-12 flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+                Explore Agency <ArrowRight className="w-3 h-3" />
+             </div>
+          </Link>
+
+          <Link href="/features#self-healing" className="bg-black p-20 hover:bg-white hover:text-black transition-all group flex flex-col justify-between min-h-[400px]">
+             <div>
+                <div className="w-16 h-16 border border-[#27272a] group-hover:border-black flex items-center justify-center mb-16">
+                   <RefreshCcw className="w-6 h-6" />
+                </div>
+                <h4 className="text-4xl font-bold mb-8 uppercase tracking-tighter">Recursive Self-Healing</h4>
+                <p className="text-sm text-[#71717a] group-hover:text-black font-medium leading-relaxed max-w-md">Advanced error-correction loops. If a logical path fails, the engine autonomously identifies the bottleneck and re-executes with refined parameters.</p>
+             </div>
+             <div className="mt-12 flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+                View Protocol <ArrowRight className="w-3 h-3" />
+             </div>
+          </Link>
+
+          <Link href="/features#swarms" className="bg-black p-20 hover:bg-white hover:text-black transition-all group flex flex-col justify-between min-h-[400px]">
+             <div>
+                <div className="w-16 h-16 border border-[#27272a] group-hover:border-black flex items-center justify-center mb-16">
+                   <Layers className="w-6 h-6" />
+                </div>
+                <h4 className="text-4xl font-bold mb-8 uppercase tracking-tighter">High-Concurrency Swarms</h4>
+                <p className="text-sm text-[#71717a] group-hover:text-black font-medium leading-relaxed max-w-md">A master orchestrator. Deploy hundreds of specialized sub-agents into a coordinated swarm, sharing collective memory and processing power.</p>
+             </div>
+             <div className="mt-12 flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+                Examine Nodes <ArrowRight className="w-3 h-3" />
+             </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* ─── INFRASTRUCTURE & ORCHESTRATION ─── */}
+      <section className="py-60 bg-[#050505] border-b border-[#27272a]">
+        <div className="grid-container mb-40 text-center">
+           <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">The Engine Room</h2>
+           <h3 className="text-4xl md:text-7xl font-bold tracking-tight mb-12 uppercase">Infrastructure.</h3>
+        </div>
+
+        <div className="grid-container grid grid-cols-1 md:grid-cols-3 gap-px bg-[#27272a] border border-[#27272a]">
+           <Link href="/features#telemetry" className="bg-black p-12 group hover:bg-zinc-900 transition-all flex flex-col justify-between min-h-[500px]">
+              <div>
+                <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-[#3f3f46] mb-8 block group-hover:text-white transition-colors">Hardware Agency</span>
+                <div className="aspect-square mb-12 overflow-hidden border border-white/5 bg-zinc-950">
+                   <img 
+                     src="/screenshots/vnmx_system_telemetry_live_monitoring.png" 
+                     alt="System Telemetry" 
+                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                   />
+                </div>
+                <h4 className="text-xl font-bold uppercase tracking-tighter mb-4">Telemetry Stream</h4>
+                <p className="text-[10px] text-[#71717a] leading-relaxed group-hover:text-white/40">Direct monitoring of local hardware primitives including CPU load and RAM allocation.</p>
+              </div>
+           </Link>
+           
+           <Link href="/features#routing" className="bg-black p-12 group hover:bg-zinc-900 transition-all flex flex-col justify-between min-h-[500px]">
+              <div>
+                <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-[#3f3f46] mb-8 block group-hover:text-white transition-colors">Model Routing</span>
+                <div className="aspect-square mb-12 overflow-hidden border border-white/5 bg-zinc-950">
+                   <img 
+                     src="/screenshots/vnmx_performance_routing_engine.png" 
+                     alt="Performance Routing" 
+                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                   />
+                </div>
+                <h4 className="text-xl font-bold uppercase tracking-tighter mb-4">Thread Orchestration</h4>
+                <p className="text-[10px] text-[#71717a] leading-relaxed group-hover:text-white/40">Dynamic task distribution across local vision cores and logic threads for maximum efficiency.</p>
+              </div>
+           </Link>
+
+           <Link href="/features#failover" className="bg-black p-12 group hover:bg-zinc-900 transition-all flex flex-col justify-between min-h-[500px]">
+              <div>
+                <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-[#3f3f46] mb-8 block group-hover:text-white transition-colors">Multi-Model Failover</span>
+                <div className="aspect-square mb-12 overflow-hidden border border-white/5 bg-zinc-950">
+                   <img 
+                     src="/screenshots/vnmx_settings_model_orchestration.png" 
+                     alt="Model Orchestration" 
+                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                   />
+                </div>
+                <h4 className="text-xl font-bold uppercase tracking-tighter mb-4">Failover Protocol</h4>
+                <p className="text-[10px] text-[#71717a] leading-relaxed group-hover:text-white/40">Seamlessly route between 10+ cloud and local LLM nodes based on task complexity.</p>
+              </div>
+           </Link>
+        </div>
+      </section>
+
+      {/* ─── COGNITIVE MEMORY ─── */}
+      <section className="py-60 grid-container border-b border-[#27272a]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
+           <Link href="/framework#vault" className="order-2 lg:order-1 relative group block overflow-hidden">
+              <img 
+                src="/screenshots/vnmx_knowledge_vault_execution_history.png" 
+                alt="Knowledge Vault" 
+                className="w-full grayscale group-hover:grayscale-0 transition-all duration-1000 border border-white/5 group-hover:scale-105"
+              />
+              <div className="absolute top-8 left-8 text-[10px] font-mono text-emerald-500 bg-emerald-500/10 px-4 py-2 uppercase tracking-widest">Audit-Grade Recall</div>
+           </Link>
+           <div className="order-1 lg:order-2">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Cognitive Pipeline</h2>
+              <h3 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 uppercase leading-none">The Knowledge <br /> Vault.</h3>
+              <p className="text-[#71717a] text-lg font-medium leading-relaxed mb-12">
+                 VenomX utilizes a 9-tier memory architecture. The Knowledge Vault stores 
+                 every mission loop and execution history, providing perfect episodic 
+                 recall for audit and optimization.
+              </p>
+              <Link href="/framework" className="text-[10px] font-bold uppercase tracking-[0.5em] text-white flex items-center gap-4 group">
+                 Explore Memory Tiers <ArrowRight className="w-3 h-3 group-hover:translate-x-2 transition-transform" />
+              </Link>
+           </div>
+        </div>
+      </section>
+
+      {/* ─── SURVIVAL & SKILL LOGIC ─── */}
+      <section className="py-60 bg-black border-b border-[#27272a]">
+        <div className="grid-container grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
+           <div>
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6 text-[#3f3f46]">Operational Logic</h2>
+              <h3 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 uppercase leading-none">The Claws <br /> Framework.</h3>
+              <p className="text-[#71717a] text-lg font-medium leading-relaxed mb-16">
+                 Built with axiomatic safety. The Claws framework manages the agent's 
+                 survival metrics and multi-sensory skill matrix.
+              </p>
+              <div className="grid grid-cols-2 gap-12">
+                 <Link href="/features#skills" className="group">
+                    <div className="aspect-video mb-6 overflow-hidden border border-white/5">
+                       <img 
+                         src="/screenshots/vnmx_skill_matrix_ecosystem.png" 
+                         alt="Skill Matrix" 
+                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                       />
+                    </div>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#3f3f46] group-hover:text-white transition-colors">Skill Matrix Ecosystem</h4>
+                 </Link>
+                 <Link href="/features#multimodal" className="group">
+                    <div className="aspect-video mb-6 overflow-hidden border border-white/5">
+                       <img 
+                         src="/screenshots/vnmx_voice_integrations_config.png" 
+                         alt="Voice Config" 
+                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                       />
+                    </div>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#3f3f46] group-hover:text-white transition-colors">Multi-Sensory Input</h4>
+                 </Link>
+              </div>
+           </div>
+
+           <Link href="/features#survival" className="relative border border-[#27272a] aspect-square flex flex-col font-mono text-[11px] text-[#3f3f46] overflow-hidden group bg-zinc-950 p-16 hover:border-white/20 transition-all">
+              <div className="bg-noir-grid absolute inset-0 opacity-5" />
+              <img 
+                src="/screenshots/vnmx_survival_dashboard_agi_health.png" 
+                alt="AGI Health" 
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-60 transition-all duration-1000 z-0"
+              />
+              <div className="relative z-10 flex-1 flex flex-col justify-between">
+                 <div className="space-y-8 relative">
+                    <img src="/screenshots/vnmx_neural_dashboard_status_overlay.png" className="absolute -right-20 -top-20 w-64 border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-1000 z-20" />
+                    <span className="text-white"># Protocol: Axiomatic Survival</span><br />
+                    <span>{"[OK] AGI Health: Peak Performance"}</span><br />
+                    <span className="text-white">{"$ claws --execute-labor --sovereign"}</span><br />
+                    <span>{"[SUCCESS] Mission parameters verified."}</span>
+                 </div>
+                 <div className="mt-auto border-t border-white/5 pt-12 flex items-center justify-between uppercase tracking-widest text-[9px] font-bold">
+                    <span>AGI Core | Claws v2.0</span>
+                    <span className="flex items-center gap-2 group-hover:text-white transition-colors"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> View Status</span>
+                 </div>
+              </div>
+           </Link>
         </div>
       </section>
 
@@ -253,6 +425,7 @@ export default function HomePage() {
             Contact HQ
           </a>
         </div>
+      </section>
       {/* ─── Page Navigation ─── */}
       <PageNavigation />
     </div>

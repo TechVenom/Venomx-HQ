@@ -1,71 +1,70 @@
 "use client";
 
 import React from "react";
-import { Shield, Lock, Eye, Zap } from "lucide-react";
+import { Shield, Lock, AlertTriangle, EyeOff } from "lucide-react";
 import { PageNavigation } from "@/components/PageNavigation";
 
 export default function SafetyDocsPage() {
   const axioms = [
-    { title: "Axiom 01: Sovereignty", desc: "The engine must never upload user data to unauthorized external endpoints. Data ownership is absolute and immutable." },
-    { title: "Axiom 02: Verification", desc: "Every system-level execution path must be validated against the user's defined security policy before commitment." },
-    { title: "Axiom 03: Transparency", desc: "The engine must maintain high-fidelity logs of all reasoning loops and tool calls for human-centric auditability." },
-    { title: "Axiom 04: Survival", desc: "In the event of a protocol breach, the engine must autonomously isolate its core nodes and enters a secure standby state." }
+    { title: "Sovereign Privacy", desc: "No data leaves the local environment unless explicitly authorized.", icon: Lock },
+    { title: "Resource Guarding", desc: "Hard limits on CPU, memory, and bandwidth consumption.", icon: AlertTriangle },
+    { title: "Recursive Validation", desc: "Every destructive command requires human-in-the-loop approval.", icon: Shield },
+    { title: "Anonymity Layer", desc: "Integrated multi-hop routing for all external network requests.", icon: EyeOff }
   ];
 
   return (
-    <div className="max-w-4xl space-y-16">
+    <div className="space-y-16">
       <header>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 uppercase">Safety Protocol: <br /> Survival Axioms.</h1>
-        <p className="text-xl text-[#71717a] leading-relaxed font-medium">
-          VenomX is governed by hardcoded execution protocols that ensure absolute alignment and security.
+        <h1 className="text-5xl font-extrabold tracking-tighter mb-6 uppercase">Survival Axioms</h1>
+        <p className="text-xl text-slate-400 leading-relaxed max-w-2xl">
+          The hardcoded protocols that ensure VenomX remains safe, secure, and 
+          aligned with the user's sovereign interests.
         </p>
       </header>
 
       <section className="space-y-12">
-        <div className="prose prose-invert max-w-none text-[#71717a] leading-relaxed">
+        <div className="prose prose-invert max-w-none text-slate-400">
           <p>
-            Unlike cloud-based assistants that rely on probabilistic alignment, VenomX 
-            implements "Axiomatic Safety." These are deterministic protocol layers that 
-            sit between the reasoning engine and the execution environment.
+            VenomX does not follow "Asimov's Laws." It follows **Survival Axioms**—a set of 
+            prioritized protocols designed for operation in adversarial digital environments.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-px bg-[#27272a] border border-[#27272a] mb-12">
-          <div className="bg-black p-4 aspect-[21/9] overflow-hidden group">
-             <img 
-               src="/images/security-protocol.png" 
-               alt="Security Protocol" 
-               className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-100 transition-all"
-               onError={(e) => (e.currentTarget.parentElement!.style.display = 'none')}
-             />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-px bg-[#27272a] border border-[#27272a]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {axioms.map((axiom, i) => (
-            <div key={i} className="bg-black p-12 hover:bg-white hover:text-black transition-all group">
-              <div className="flex justify-between items-center mb-8">
-                 <Shield className="w-5 h-5 text-white group-hover:text-black" />
-                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#3f3f46] group-hover:text-black opacity-40">Protocol Node</span>
-              </div>
-              <h4 className="text-2xl font-bold uppercase tracking-tighter mb-6">{axiom.title}</h4>
-              <p className="text-sm leading-relaxed font-medium text-[#71717a] group-hover:text-black">{axiom.desc}</p>
+            <div key={i} className="p-10 border border-white/5 bg-zinc-950 flex gap-8 group hover:bg-white hover:text-black transition-all">
+               <div className="w-12 h-12 border border-[#27272a] group-hover:border-black flex items-center justify-center flex-shrink-0">
+                  <axiom.icon className="w-6 h-6" />
+               </div>
+               <div>
+                  <h3 className="text-lg font-bold mb-3 uppercase tracking-tighter">{axiom.title}</h3>
+                  <p className="text-sm text-[#71717a] group-hover:text-black leading-relaxed">{axiom.desc}</p>
+               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="p-12 border border-[#27272a] bg-zinc-950/50">
-        <div className="flex items-center gap-6 mb-8">
-           <Lock className="w-6 h-6 text-white" />
-           <h3 className="text-2xl font-bold uppercase tracking-tight">Encrypted Secrets</h3>
-        </div>
-        <p className="text-sm text-[#71717a] leading-relaxed font-medium">
-          The engine utilizes a hardware-backed secure enclave for storing API keys, 
-          credentials, and sensitive logic. No reasoning loop can expose these secrets 
-          to external prompts.
+      <section className="py-12 border-t border-white/5 space-y-8">
+        <h2 className="text-2xl font-bold uppercase tracking-tight">Permission System</h2>
+        <p className="text-slate-400 text-sm leading-relaxed">
+           The agent uses a granular permission manifest. You can define exact boundaries 
+           for what directories the agent can read, what URLs it can visit, and what 
+           commands it can execute without manual approval.
         </p>
+        <div className="bg-slate-900 p-8 border border-white/5">
+           <pre className="text-xs text-slate-300 leading-relaxed overflow-x-auto">
+{`permissions:
+  filesystem:
+    read: ["/home/user/project"]
+    write: ["/home/user/project/logs"]
+  network:
+    allow: ["github.com", "pypi.org"]
+    deny: ["*"]`}
+           </pre>
+        </div>
       </section>
+
       <PageNavigation />
     </div>
   );

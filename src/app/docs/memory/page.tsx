@@ -1,66 +1,68 @@
 "use client";
 
 import React from "react";
-import { Database, Zap, Shield, Activity, Brain } from "lucide-react";
+import { Layers, Database, History, Cpu } from "lucide-react";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function MemoryDocsPage() {
   const tiers = [
-    { name: "Sensory", type: "Immediate", desc: "Processes real-time environmental input (audio, vision, system events). Acts as the primary interface between the physical world and the engine." },
-    { name: "Working", type: "Transient", desc: "A high-concurrency buffer for active task context. Stores current mission parameters and active logical branches." },
-    { name: "Short-term", type: "Buffered", desc: "Temporary retention of recent conversational and execution history. Allows for immediate context recall in active sessions." },
-    { name: "Long-term", type: "Persistent", desc: "User-specific data vault. Stores permanent identities, learned preferences, and cross-session behavioral alignment." },
-    { name: "Episodic", type: "Historical", desc: "A chronological ledger of every past mission and execution cycle. Enables historical decision analysis and self-correction." },
-    { name: "Semantic", type: "Conceptual", desc: "The engine's internal knowledge base. Stores abstract facts, structured concepts, and world-logic metadata." },
-    { name: "Procedural", type: "Operational", desc: "Stores 'Claws' execution patterns. Skill-based logic and tool-usage mastery refined over time." },
-    { name: "Collective", type: "Swarm", desc: "Synchronized knowledge layer across distributed nodes. Enables shared recall within a multi-agent swarm." },
-    { name: "Meta-memory", type: "Reflective", desc: "Metacognitive awareness. The engine assesses its own cognitive load, learning progress, and reasoning limits." }
+    { title: "Sensory Memory", desc: "Transient buffer for real-time visual and auditory streams.", latency: "< 5ms" },
+    { title: "Working Memory", desc: "Active context for the current reasoning loop.", latency: "Immediate" },
+    { title: "Episodic Recall", desc: "Vectorized history of all past mission events.", latency: "Variable" },
+    { title: "Semantic Vault", desc: "Long-term conceptual and abstract knowledge storage.", latency: "Persistent" }
   ];
 
   return (
-    <div className="max-w-4xl space-y-16">
+    <div className="space-y-16">
       <header>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 uppercase">Cognitive Pipeline: <br /> The 9-Tier Memory.</h1>
-        <p className="text-xl text-[#71717a] leading-relaxed font-medium">
-          VenomX utilizes a sophisticated hierarchical memory architecture to maintain 
-          high-concurrency context and long-term sovereignty.
+        <h1 className="text-5xl font-extrabold tracking-tighter mb-6 uppercase">Memory Stack</h1>
+        <p className="text-xl text-slate-400 leading-relaxed max-w-2xl">
+          Understanding the 9-tier hierarchical memory architecture that powers VenomX's 
+          long-term reasoning and recall.
         </p>
       </header>
 
       <section className="space-y-12">
-        <div className="prose prose-invert max-w-none text-[#71717a] leading-relaxed">
+        <div className="prose prose-invert max-w-none text-slate-400">
           <p>
-            Unlike traditional LLMs that rely on simple context windows, VenomX implements a 
-            modular cognitive pipeline. Information is filtered, synthesized, and stored across 
-            nine specialized tiers, mimicking advanced human neuro-architecture.
+            VenomX does not rely on a simple chat history. It utilizes a **Hierarchical Cognitive Stack** 
+            that mimics human information processing. This allows the agent to maintain focus on 
+            complex, months-long missions without losing context.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-px bg-[#27272a] border border-[#27272a]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {tiers.map((tier, i) => (
-            <div key={i} className="bg-black p-10 flex flex-col md:flex-row gap-12 group hover:bg-white hover:text-black transition-all">
-              <div className="md:w-1/3">
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#3f3f46] group-hover:text-black mb-4 block">Tier 0{i+1} — {tier.type}</span>
-                <h4 className="text-2xl font-bold uppercase tracking-tighter">{tier.name}</h4>
-              </div>
-              <div className="md:w-2/3">
-                <p className="text-sm leading-relaxed font-medium">{tier.desc}</p>
-              </div>
+            <div key={i} className="p-8 border border-white/5 bg-zinc-950 hover:border-white/20 transition-all">
+               <div className="flex justify-between items-start mb-6">
+                  <h3 className="font-bold uppercase tracking-widest text-white">{tier.title}</h3>
+                  <span className="text-[10px] font-mono text-emerald-500 bg-emerald-500/10 px-2 py-1">{tier.latency}</span>
+               </div>
+               <p className="text-sm text-[#71717a] leading-relaxed mb-8">{tier.desc}</p>
+               <div className="w-full h-1 bg-[#27272a] rounded-full overflow-hidden">
+                  <div className="h-full bg-white transition-all duration-1000" style={{ width: `${(i+1)*25}%` }} />
+               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="p-12 border border-[#27272a] bg-zinc-950/50">
-        <div className="flex items-center gap-6 mb-8">
-           <Zap className="w-6 h-6 text-white" />
-           <h3 className="text-2xl font-bold uppercase tracking-tight">Data Sovereignty</h3>
+      <section className="py-12 border-t border-white/5">
+        <h2 className="text-2xl font-bold mb-8 uppercase tracking-tight">Vector Integration</h2>
+        <div className="bg-slate-900 p-8 border border-white/5 space-y-6">
+           <div className="flex items-center gap-4 text-emerald-400">
+              <Database className="w-6 h-6" />
+              <span className="font-mono text-sm uppercase">Semantic Indexing Active</span>
+           </div>
+           <p className="text-sm text-slate-400 leading-relaxed">
+              Every memory tier is automatically synchronized with a local vector database 
+              (Chroma or Qdrant), allowing for high-fidelity retrieval using semantic similarity 
+              searches during reasoning loops.
+           </p>
         </div>
-        <p className="text-sm text-[#71717a] leading-relaxed font-medium">
-          All memory tiers are stored locally on your node. VenomX does not upload your 
-          contextual data to external servers, ensuring that your episodic history and 
-          personal identities remain private and sovereign.
-        </p>
       </section>
+
+      <PageNavigation />
     </div>
   );
 }
