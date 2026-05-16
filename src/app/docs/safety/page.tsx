@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { Shield, Lock, AlertTriangle, EyeOff } from "lucide-react";
+import { Shield, Lock, AlertTriangle, EyeOff, Zap } from "lucide-react";
 import { PageNavigation } from "@/components/PageNavigation";
+import { InfoBox, DocsTable } from "@/components/docs/DocsComponents";
 
 export default function SafetyDocsPage() {
   const axioms = [
@@ -14,47 +15,44 @@ export default function SafetyDocsPage() {
 
   return (
     <div className="space-y-16">
-      <header>
-        <h1 className="text-5xl font-extrabold tracking-tighter mb-6 uppercase">Survival Axioms</h1>
-        <p className="text-xl text-slate-400 leading-relaxed max-w-2xl">
+      <header className="space-y-4">
+        <h1 className="text-5xl font-extrabold tracking-tighter text-white uppercase">Survival Axioms</h1>
+        <p className="text-xl text-slate-400 leading-relaxed max-w-3xl">
           The hardcoded protocols that ensure VenomX remains safe, secure, and 
           aligned with the user's sovereign interests.
         </p>
       </header>
 
-      <section className="space-y-12">
-        <div className="prose prose-invert max-w-none text-slate-400">
-          <p>
-            VenomX does not follow "Asimov's Laws." It follows **Survival Axioms**—a set of 
-            prioritized protocols designed for operation in adversarial digital environments.
-          </p>
-        </div>
+      <InfoBox type="warning" title="Sovereign Integrity">
+        VenomX does not follow "Asimov's Laws." It follows <strong>Survival Axioms</strong>—a set of 
+        prioritized protocols designed for operation in adversarial digital environments where 
+        privacy and resource control are paramount.
+      </InfoBox>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {axioms.map((axiom, i) => (
-            <div key={i} className="p-10 border border-white/5 bg-zinc-950 flex gap-8 group hover:bg-white hover:text-black transition-all">
-               <div className="w-12 h-12 border border-[#27272a] group-hover:border-black flex items-center justify-center flex-shrink-0">
-                  <axiom.icon className="w-6 h-6" />
-               </div>
-               <div>
-                  <h3 className="text-lg font-bold mb-3 uppercase tracking-tighter">{axiom.title}</h3>
-                  <p className="text-sm text-[#71717a] group-hover:text-black leading-relaxed">{axiom.desc}</p>
-               </div>
-            </div>
-          ))}
-        </div>
+      <section className="space-y-8">
+        <h2 className="text-2xl font-bold text-white uppercase tracking-tight">Axiom Protocols</h2>
+        <DocsTable 
+          headers={["Axiom", "Operational Summary"]}
+          rows={axioms.map(axiom => [
+            <div key={axiom.title} className="flex items-center gap-2 font-bold text-[#facc15]"><axiom.icon className="w-4 h-4" /> {axiom.title}</div>,
+            axiom.desc
+          ])}
+        />
       </section>
 
       <section className="py-12 border-t border-white/5 space-y-8">
-        <h2 className="text-2xl font-bold uppercase tracking-tight">Permission System</h2>
-        <p className="text-slate-400 text-sm leading-relaxed">
+        <h2 className="text-2xl font-bold text-white uppercase tracking-tight flex items-center gap-3">
+          <Shield className="w-5 h-5 text-[#facc15]" /> Permission System
+        </h2>
+        <p className="text-slate-400 text-sm leading-relaxed max-w-3xl">
            The agent uses a granular permission manifest. You can define exact boundaries 
            for what directories the agent can read, what URLs it can visit, and what 
            commands it can execute without manual approval.
         </p>
-        <div className="bg-slate-900 p-8 border border-white/5">
-           <pre className="text-xs text-slate-300 leading-relaxed overflow-x-auto">
-{`permissions:
+        <div className="bg-slate-900 p-8 border border-white/5 rounded-sm">
+           <pre className="text-xs text-emerald-500 font-mono leading-relaxed overflow-x-auto">
+{`# permissions.yaml
+permissions:
   filesystem:
     read: ["/home/user/project"]
     write: ["/home/user/project/logs"]
